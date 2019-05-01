@@ -5,7 +5,6 @@ const userCtr = {};
 userCtr.getUsers = async (req, res) => {
     const users = await User.find();
     res.json(users);
-
 };
 
 userCtr.getUser = async (req, res) =>{
@@ -19,7 +18,6 @@ userCtr.createUser = async (req, res) => {
     const user = new User(req.body);
     await user.save();
     res.json("User created!");
-    
 };
 
 userCtr.deleteUser = async (req, res) =>{

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 import { RouterModule, Route } from '@angular/router'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +25,8 @@ const routes: Route[] = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
