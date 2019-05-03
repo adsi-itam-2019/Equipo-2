@@ -1,6 +1,14 @@
 <link rel="stylesheet" href="/catalog.component">  
 
-  <div class="container" style="background-color: whitesmoke">
+<div class="Bg">
+<nav class="nav-wrapper white darken-1">
+  <a href="/" style="margin-left: 20px" class="brand-logo grey-text text-darken-4">ADSI Project</a>
+  <ul class="right">
+      <li><a class="white-text grey darken-4" routerLink="/register">Salir</a></li>
+  </ul>
+</nav>
+
+  <div class="container">
       <ul class="list-group">
         <li *ngFor="let property of dataList" >
           <div class="grid-container">
@@ -10,15 +18,16 @@
             <div class="item2"><h2 class="titulo">{{property.title}}</h2></div>  
             <div><p style="font-size:18px; width: 500px; padding: 15px; text-align: justify">{{property.description}}</p></div>
             <div class="grid-container">
-                <div class="item10"><button class="button"> Clean</button></div>
-                <div class="item10"><button class="button2"> Clean</button></div>
+                <div class="item10"><button class="button">Contactar</button></div>
+                <div class="item10"><button class="button2">+ Ver más</button></div>
                 </div>
             <div>
                 <p style="font-size:23px">{{property.price}} 
                     {{property.distance}}</p>
             </div> 
           </div>  
+          <hr>
         </li>
       </ul>     
     </div>
-    
+  </div>

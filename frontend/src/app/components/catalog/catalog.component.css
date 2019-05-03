@@ -1,3 +1,10 @@
+.Bg {
+  background-color: whitesmoke;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
 h2.titulo{
     color: green;
     text-align: center;
@@ -8,12 +15,12 @@ h2.titulo{
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 5px;
-    background-color: whitesmoke;
+    background-color: white;
     padding: 10px;
   }
   
   .grid-container > div {
-    background-color: whitesmoke;
+    background-color: whites;
     font-size: 30px;
     padding-left: 50px;
     padding-top: 40px;
