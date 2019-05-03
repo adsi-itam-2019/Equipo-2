@@ -11,7 +11,7 @@ export class CatalogComponent implements OnInit {
   constructor() {
     this.dataList=[{
       "title":"Chihuahua 650 int. 43",
-      "description":"Departamento sin amueblar cerca del ITAM ) a 5 minutos"+ 
+      "description":"Departamento sin amueblar cerca del ITAM ) a 5 minutos "+ 
       "caminando, todos los servicios: "+
       "2 cuartos, baño completo, cocina, sala.",
       "price":"$5,500",

@@ -14,8 +14,9 @@ h2.titulo{
   
   .grid-container > div {
     background-color: whitesmoke;
-    padding: 10px 0;
     font-size: 30px;
+    padding-left: 50px;
+    padding-top: 40px;
   }
   
   .item1 {
@@ -26,6 +27,8 @@ h2.titulo{
   .item2{
     grid-column-start: 2;
     grid-column-end: 4;
+    width: 700px;
+    text-align: left;
   }
 
   .item3{
@@ -35,6 +38,8 @@ h2.titulo{
   .item10{
     grid-column-start: 1;
     grid-column-end: 4;
+    width: 250px;
+    height: 50px;
   }
 
 .example-card {
