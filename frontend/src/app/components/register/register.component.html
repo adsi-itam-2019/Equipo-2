@@ -6,7 +6,6 @@
             </ul>
         </nav>
     
-    
         <div class="container">
             <div class="section">
                 <div class="row">
@@ -16,7 +15,7 @@
                                 <h6> Registrarse </h6>
                             </div>
                             <div class="card-content">
-                                <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm)">
+                                <form #employeeForm="ngForm" (ngSubmit)="register(employeeForm)">
     
                                     <div class="input-field inline">
                                         <input type="text" id="email_inline" name="email" #email="ngModel"
