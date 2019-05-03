@@ -1,13 +1,26 @@
-  
-  <div style="background-color:whitesmoke" class="container">
+<link rel="stylesheet" href="/catalog.component">  
+
+
+  <div class="container" style="background-color: whitesmoke">
       <ul class="list-group">
-        <li *ngFor="let property of dataList" >    
-          <div style="background-color:white" class="container">
-          <h2><p style="color:green">{{property.title}}</p></h2>
-          <p style="font-size:18px">{{property.description}}</p>
-          <p style="font-size:20px">{{property.price}} 
-          {{property.distance}}</p>
-        </div>      
+        <li *ngFor="let property of dataList" >
+          <div class="container">
+          <div class="grid-container">
+            <div class="item1">
+                  <img src="assets\img\1.png">
+            </div>
+            <div class="item2"><h2 class="titulo">{{property.title}}</h2></div>  
+            <div><p style="font-size:18px">{{property.description}}</p></div>
+            <div class="grid-container">
+                <div class="item10"><button class="button"> Clean</button></div>
+                <div class="item10"><button class="button2"> Clean</button></div>
+                </div>
+            <div>
+                <p style="font-size:30px">{{property.price}} 
+                    {{property.distance}}</p>
+            </div> 
+          </div>
+          </div>     
         </li>
       </ul>     
     </div>
