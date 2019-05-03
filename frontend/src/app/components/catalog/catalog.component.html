@@ -1,3 +1,14 @@
-<p>
-  catalog works!
-</p>
+  
+  <div style="background-color:whitesmoke" class="container">
+      <ul class="list-group">
+        <li *ngFor="let property of dataList" >    
+          <div style="background-color:white" class="container">
+          <h2><p style="color:green">{{property.title}}</p></h2>
+          <p style="font-size:18px">{{property.description}}</p>
+          <p style="font-size:20px">{{property.price}} 
+          {{property.distance}}</p>
+        </div>      
+        </li>
+      </ul>     
+    </div>
+    

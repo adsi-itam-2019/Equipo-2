@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AccommodationListComponent } from './components/accommodation-list/accommodation-list.component';
 
 // Specify the routing of the App
 const routes: Route[] = [
@@ -23,7 +24,8 @@ const routes: Route[] = [
     AppComponent,
     CatalogComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    AccommodationListComponent
   ],
   imports: [
     BrowserModule,
