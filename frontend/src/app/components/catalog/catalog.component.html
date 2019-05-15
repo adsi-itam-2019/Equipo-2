@@ -1,33 +1,101 @@
-<link rel="stylesheet" href="/catalog.component">  
+
 
 <div class="Bg">
-<nav class="nav-wrapper white darken-1">
-  <a href="/" style="margin-left: 20px" class="brand-logo grey-text text-darken-4">ADSI Project</a>
-  <ul class="right">
-      <li><a class="white-text grey darken-4" routerLink="/register">Salir</a></li>
-  </ul>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-wrapper  cyan darken-3">
+    <a href="/" style="margin-left: 20px" class="brand-logo white-text">ADSI Project</a>
+    <ul class="right hide-on-med-and-down">
+        <li><a href="/"><i class="large material-icons">favorite_border</i></a></li>
+      <li><a href="/"><i class="large material-icons">mail_outline</i></a></li>
+      <li><a href="/"><i class="large material-icons">perm_identity</i></a></li>
+    </ul>
+  </div>
 </nav>
 
-  <div class="container">
-      <ul class="list-group">
-        <li *ngFor="let property of dataList" >
-          <div class="grid-container">
-            <div class="item1">
-                  <img src="assets\img\1.png">
-            </div>
-            <div class="item2"><h2 class="titulo">{{property.title}}</h2></div>  
-            <div><p style="font-size:18px; width: 500px; padding: 15px; text-align: justify">{{property.description}}</p></div>
-            <div class="grid-container">
-                <div class="item10"><button class="button">Contactarr</button></div>
-                <div class="item10"><button class="button2">+ Ver más</button></div>
-                </div>
-            <div>
-                <p style="font-size:23px">{{property.price}} 
-                    {{property.distance}}</p>
-            </div> 
-          </div>  
-          <hr>
-        </li>
-      </ul>     
+<!-- Buscador -->
+<div class="section">
+<div class="section">
+  <div class="row">
+    <div class="col">
+      <h5>&nbsp;&nbsp;&nbsp;Ordenar por:&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+    </div>
+    <div class="section">
+      <button class="btn waves-effect waves-light orange accent-4" type="submit" name="action">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Precio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+      <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <button class="btn waves-effect waves-light orange accent-4" type="submit" name="action">&nbsp;&nbsp;&nbsp;&nbsp;Distancia&nbsp;&nbsp;&nbsp;&nbsp;</button>
+      <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <button class="btn waves-effect waves-light orange accent-4" type="submit" name="action">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tamaño&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
     </div>
   </div>
+</div>
+</div>
+  
+<div class = "row">
+<div class = "col l1"></div>
+<!-- Contenido -->
+<div class = "col l10">
+  <ul class="list-group">
+    <li *ngFor="let property of dataList">
+      <div class="col l3">
+        <div class = "card hoverable">
+          <div class="card-image">
+              <img src={{property.image}}>
+            <span class="card-title">{{property.price}}</span>
+          </div>
+          <div class="card-content">
+              <span class="card-title">{{property.title}}</span>
+              <p><i class="Large material-icons">star</i><i class="Large material-icons">star</i><i class="Large material-icons">star</i><i class="Large material-icons">star</i><i class="Large material-icons">star_half</i></p>
+              <p>{{property.description}}</p>
+              <div class="section">
+                  <span class="card-title">{{property.distance}}</span>
+              </div>
+          </div>
+          <div class="card-action">
+            <div class="row"></div>
+            <div class="row">
+            <div class="col l6">
+                <a href="#"><button class="btn waves-effect waves-light teal accent-4" type="submit" name="action"><i class="material-icons left">add</i>Favoritos</button></a>
+            </div>
+            <div class="col l6">
+                <a href="#"><button class="btn waves-effect waves-light orange accent-4" type="submit" name="action">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ver más&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </li>
+  </ul>
+</div>
+<div class = "col l1"></div>
+</div>
+
+
+<footer class="page-footer cyan darken-3">
+    <div class="footer-copyright">
+      <div class="container">© 20149 Equipo-2 ADI ITAM, All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+
+
+<script>
+  function ScoreFn(score){
+    var x = Math.floor(score);
+    var stars = '<p>';
+    for(var i = 0; i++; i<x){
+      stars.concat('<i class="Large material-icons">star</i>');
+    }
+    x =  Math.round(score-x);
+    for(var i = 0; i++; i<x){
+      stars.concat('<i class="Large material-icons">star_half</i>');
+    }
+    stars.concat('</p>');
+    document.getElementById('scoreP').innerHTML =  stars;
+  }
+
+</script>
+

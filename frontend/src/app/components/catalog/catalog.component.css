@@ -1,14 +1,29 @@
 .Bg {
-  background-color: whitesmoke;
+  background-color: white;
   background-size:     cover;
   background-repeat:   no-repeat;
   background-position: center center;
 }
 
+i.icon-dark {
+  color: black;
+}
+
+h5.Buscador{
+  color: black;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+
 h2.titulo{
     color: green;
     text-align: center;
     font-size: 40px;
+}
+
+container.Padding{
+  padding-left: 30px;
 }
 
 .grid-container {
