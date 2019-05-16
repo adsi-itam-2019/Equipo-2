@@ -10,12 +10,8 @@ const HouseSchema = new Schema({
         luz:{type:Boolean,required:false},
         agua:{type:Boolean,required:false},
         gas:{type:Boolean,required:false},
-        microondas:{type:Boolean,required:false},
-        refrigerador:{type:Boolean,required:false},
         cocina:{type:Boolean,required:false},
         lavadora:{type:Boolean,required:false},
-        secadora:{type:Boolean,required:false},
-        mascotas:{type:Boolean,required:false}
     },
     comentarios: { type: String, required: true },
     images: { type: [String], required: true },
