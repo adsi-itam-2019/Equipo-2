@@ -1,6 +1,13 @@
 
+<html>
 
 <div class="Bg">
+
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Perfil</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">Salir</a></li>
+</ul>
 
 <!-- Navbar -->
 <nav>
@@ -8,11 +15,12 @@
     <a href="/" style="margin-left: 20px" class="brand-logo white-text">ADSI Project</a>
     <ul class="right hide-on-med-and-down">
         <li><a href="/"><i class="large material-icons">favorite_border</i></a></li>
-      <li><a href="/"><i class="large material-icons">mail_outline</i></a></li>
-      <li><a href="/"><i class="large material-icons">perm_identity</i></a></li>
+        <li><a href="/"><i class="large material-icons">mail_outline</i></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="large material-icons">perm_identity</i></a></li>
     </ul>
   </div>
 </nav>
+
 
 <!-- Buscador -->
 <div class="section">
@@ -34,6 +42,7 @@
   
 <div class = "row">
 <div class = "col l1"></div>
+
 <!-- Contenido -->
 <div class = "col l10">
   <ul class="list-group">
@@ -46,7 +55,7 @@
           </div>
           <div class="card-content">
               <span class="card-title">{{property.title}}</span>
-              <p><i class="Large material-icons">star</i><i class="Large material-icons">star</i><i class="Large material-icons">star</i><i class="Large material-icons">star</i><i class="Large material-icons">star_half</i></p>
+              <p><i class="Large material-icons">star_border</i><i class="Large material-icons">star_border</i><i class="Large material-icons">star_border</i><i class="Large material-icons">star_border</i><i class="Large material-icons">star_border</i></p>
               <p>{{property.description}}</p>
               <div class="section">
                   <span class="card-title">{{property.distance}}</span>
@@ -83,19 +92,25 @@
 
 
 <script>
-  function ScoreFn(score){
-    var x = Math.floor(score);
-    var stars = '<p>';
-    for(var i = 0; i++; i<x){
-      stars.concat('<i class="Large material-icons">star</i>');
+
+(function($) {
+		$(function() {
+
+  $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, 
+      hover: true,
+      gutter: 0, 
+      belowOrigin: true, 
+      stopPropagation: false 
     }
-    x =  Math.round(score-x);
-    for(var i = 0; i++; i<x){
-      stars.concat('<i class="Large material-icons">star_half</i>');
-    }
-    stars.concat('</p>');
-    document.getElementById('scoreP').innerHTML =  stars;
-  }
+  );
+
+		});
+})(jQuery); 
 
 </script>
 
+
+</html>

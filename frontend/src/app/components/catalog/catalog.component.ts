@@ -42,42 +42,42 @@ export class CatalogComponent implements OnInit {
       "description":"Departamento amueblar cerca del ITAM "+ 
       ", todos los servicios: "+
       "1 cuarto, baño completo, cocina y sala.",
-      "price":"$5,500",
+      "price":"$8,500",
       "distance":"+6 minutos caminando",
       "score": 3.5,
-      "image": ["assets\\img\\2.png"]
+      "image": ["assets\\img\\4.png"]
     },{
       "title":"Frontera 68",
       "description":"Cuarto para estudiantes amueblado con"+ 
       "todos los servicios: ",
-      "price":"$5,500",
+      "price":"$6,400",
       "distance":"+8 minutos caminando",
       "score": 5,
-      "image": ["assets\\img\\1.png"]
+      "image": ["assets\\img\\5.png"]
     },{
       "title":"Colima 32",
       "description":"Cuarto con todos los servicios para "+ 
       "estudiantes del ITAM. ",
-      "price":"$5,500",
+      "price":"$4,500",
       "distance":"+9 minutos caminando",
       "score": 3.5,
-      "image": ["assets\\img\\2.png"]
+      "image": ["assets\\img\\6.png"]
     },{
       "title":"Michoacán 8",
       "description":"Cuarto sin amueblar. Con todos los sericios."+ 
       "OXXO a 2 min caminando. ",
-      "price":"$5,500",
+      "price":"$7,00",
       "distance":"+12 minutos caminando",
       "score": 4.5,
-      "image": ["assets\\img\\3.png"]
+      "image": ["assets\\img\\7.png"]
     },{
       "title":"Hidalgo 43",
       "description":"Cuarto dentro de departamento compartido."+ 
       " Con todos los servicios. Limpieza una vez a la semana.",
-      "price":"$5,500",
+      "price":"$8,900",
       "distance":"+15 minutos caminando",
       "score": 5,
-      "image": ["assets\\img\\2.png"]
+      "image": ["assets\\img\\8.png"]
     },];
    }
 
