@@ -1,34 +1,41 @@
 <div class="loginTemplate">
-    <nav class="nav-wrapper white darken-1">
-        <a href="/" style="margin-left: 20px" class="brand-logo grey-text text-darken-4">ADSI Project</a>
-        <ul class="right">
-            <li><a class="white-text grey darken-4" routerLink="/register">Registrarse</a></li>
-        </ul>
-    </nav>
+    <!-- Navbar -->
+    <nav>
+            <div class="nav-wrapper  cyan darken-3">
+              <a href="/" style="margin-left: 20px" class="brand-logo white-text">ADSI Project</a>
+              <ul class="right">
+                    <li><a class="white-text "  style="background-color: rgb(222,133,82); font-weight: bold" routerLink="/register">Registrarme</a></li>
+                </ul>
+            </div>
+          </nav>
+
+          
+
     <div style="margin-top: 45px" class="container">
         <div class="section">
             <div class="row">
                 <div class="col s12 m4 offset-m4">
                     <div class="card">
-                        <div class="card-action teal grey darken-4 white-text center">
-                            <h6> Iniciar Sesión </h6>
-                        </div>
+                        <!-->div class="card-action teal white center"mat >
+                            <h5 style="font-weight: bold"> Ingresa a tu cuenta</h5>
+                        </div-->
                         <div class="card-content">
+                                <span class="card-title" style="font-weight: bold; margin-bottom: 15px; text-align: center;">Ingresa a tu cuenta</span>
                             <form #userForm="ngForm" (ngSubmit)="logUser(userForm)">
 
                                 <div class="input-field inline">
                                     <input type="text" id="email_inline" name="email" #email="ngModel"
                                         [(ngModel)]="userService1.user.email">
-                                    <label for="email_inline">Email</label>
-                                </div>
+                                <label for="email_inline">Correo</label>
+                                    </div>
                                 <div class="input-field inline">
                                     <input type="password" id="password_inline" name="password" #password="ngModel"
                                         [(ngModel)]="userService1.user.password">
-                                    <label for="password_inline">Contraseña</label>
-                                </div>
+                                <label for="password_inline">Contraseña</label>
+                                    </div>
                                 <div class="form-field">
-                                    <button class="btn-large waves-effect waves-light grey darken-4" routerLink="/catalog"
-                                        style="width:100%;">Acceder</button>
+                                    <button class="btn-large waves-effect waves-light"
+                                        style="width:100%; background-color: rgb(25, 122, 136);">Acceder</button>
                                 </div>
                             </form>
                         </div>

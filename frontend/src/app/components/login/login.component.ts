@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
-import { NgForm } from '@angular/forms';
+import { NgForm, NgModel } from '@angular/forms';
 import { Users } from '../../models/Users';
 import { Router } from "@angular/router";
 
+declare var M: any;
 
 @Component({
   selector: 'app-login',
@@ -14,18 +15,30 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
 
   
+  
   constructor(private userService1: UserService, private router: Router) { }
 
   ngOnInit() {
+
+    
   }
 
   logUser(form: NgForm){
-    this.userService1.getUsers().subscribe(
+
+
+    this.router.navigateByUrl('/catalog');
+
+    //var pass = this.userService1.user.password;
+
+    //M.toast({html: pass})
+
+    //console.log("clicked");
+        
+    /*this.userService1.getUsers().subscribe(
       res=>{
         this.userService1.users = res as Users[];
         console.log(this.userService1.users);
-        this.router.navigateByUrl('/register');
-      }
-    );
+       }
+    );*/
   }
 }
