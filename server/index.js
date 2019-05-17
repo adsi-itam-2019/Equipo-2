@@ -5,7 +5,7 @@ const app = express();
 
 const { mongoose } = require('./database');
 
-// Settings
+// Settings 
 app.set('port', process.env.PORT || 3000);
 
 // Middlewares
@@ -15,6 +15,7 @@ app.use(cors({origin: 'http://localhost:4200'}));
 
 // Routes
 app.use( '/api/users', require('./routes/users.routes'));
+app.use( '/api/houses', require('./routes/houses.routes'));
 
 // Init Server
 app.listen(app.get('port'), () =>{

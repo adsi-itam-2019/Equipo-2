@@ -3,13 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { RouterModule, Route } from '@angular/router'
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AccommodationListComponent } from './components/accommodation-list/accommodation-list.component';
+import { HousesComponent } from './components/houses/houses.component';
 
 import {MatCardModule} from '@angular/material/card';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -20,6 +23,7 @@ const routes: Route[] = [
   { path: '', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'catalog', component: CatalogComponent},
+  { path: 'house', component: HousesComponent}
   { path: 'ownercatalog', component: OwnerCatalogComponent},
   {path: 'mailbox',component:MailboxComponent}
 ];
@@ -32,6 +36,7 @@ const routes: Route[] = [
     RegisterComponent,
     LoginComponent,
     AccommodationListComponent,
+    HousesComponent
     OwnerCatalogComponent
     MailboxComponent
   ],
@@ -39,6 +44,7 @@ const routes: Route[] = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
     MatCardModule,
