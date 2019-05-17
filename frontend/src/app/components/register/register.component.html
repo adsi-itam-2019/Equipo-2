@@ -1,47 +1,104 @@
 <div class="registerTemplate">
-        <nav class="nav-wrapper white darken-1">
-            <a routerLink="/" style="margin-left: 20px" class="brand-logo grey-text text-darken-4">ADSI Project</a>
-            <ul class="right">
-                <li><a class="white-text grey darken-4" routerLink="/">Iniciar Sesión</a></li>
-            </ul>
-        </nav>
-    
-        <div class="container">
-            <div class="section">
-                <div class="row">
-                    <div class="col s12 m4 offset-m4">
-                        <div class="card">
-                            <div class="card-action teal grey darken-4 white-text center">
-                                <h6> Registrarse </h6>
-                            </div>
-                            <div class="card-content">
-                                <form #employeeForm="ngForm" (ngSubmit)="register(employeeForm)">
-    
-                                    <div class="input-field inline">
-                                        <input type="text" id="email_inline" name="email" #email="ngModel"
-                                            [(ngModel)]="userService1.user.email">
-                                        <label for="email_inline">Email</label>
-                                    </div>
-                                    <div class="input-field inline">
-                                        <input type="password" id="password_inline" name="password" #password="ngModel"
-                                            [(ngModel)]="userService1.user.password">
-                                        <label for="password_inline">Password</label>
-                                    </div>
-                                    <div class="input-field inline">
-                                            <input type="text" id="name_inline" name="name" #name="ngModel"
-                                                [(ngModel)]="userService1.user.name">
-                                            <label for="name_inline">Email</label>
-                                        </div>
-                                    <input type="date" #date='ngModel' [(ngModel)]="userService1.user.date">
-                                    <div class="form-field">
-                                        <button class="btn-large waves-effect waves-light grey darken-4"
-                                            style="width:100%; margin-top: 10px;">Registrarme</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Navbar -->
+<nav>
+       <div class="nav-wrapper  cyan darken-3">
+         <a href="/" style="margin-left: 20px" class="brand-logo white-text">ADSI Project</a>
+         <a href="#" class="brand-logo center">TITULO</a>
+         <ul class="right">
+               <li><a class="white-text "  style="background-color: rgb(222,133,82); font-weight: bold;" routerLink="/">Iniciar Sesión</a></li>
+           </ul>
+       </div>
+     </nav>
+
+   <div class="container">
+           <div class="row">
+               <div class="col s12 m4 offset-m4">
+                   <div class="card">
+
+                       <h5 style="font-weight: bold; text-align: center; padding-top: 20px">Registro</h5>
+
+                       <div class="row" >
+
+                               <div class="col s12">
+                                       <ul class="tabs">
+                                         <li class="tab col s6"><a class="active" href="#test1">Alumno</a></li>
+                                         <li class="tab col s6"><a href="#test2">Propietario</a></li>
+                                       </ul>
+                                     </div>
+   
+
+                                     <div class="card-content">
+                               
+                                          
+                                   
+                                           
+                                   <div id="test1" class="col s12" class="card-content">
+                                       <form #employeeForm="ngForm" (ngSubmit)="register(employeeForm)">
+           
+                                               <div class="input-field">
+                                                       <input type="text" id="user_name_inline" name="name" #name="ngModel"
+                                                           [(ngModel)]="userService1.user.name">
+                                                       <label for="user_name_inline">Nombre</label>
+                                               </div>
+
+                                           <div class="input-field">
+                                               <input type="text" id="user_email_inline" name="email" #email="ngModel"
+                                                   [(ngModel)]="userService1.user.email">
+                                                   <label for="user_email_inline">Correo</label>
+                                           </div>
+
+                                           <div class="input-field">
+                                               <input type="password" id="user_password_inline" name="password" #password="ngModel"
+                                                   [(ngModel)]="userService1.user.password">
+                                                   <label for="user_password_inline">Contraseña</label>
+                                           </div>
+                                          
+                                           
+                                           <div class="form-field">
+                                               <button class="btn-large waves-effect waves-light"
+                                                   style="width:100%; background-color: rgb(25, 122, 136);">Registrarme</button>
+                                           </div>
+                                       </form>
+                                   </div>
+                                   <div id="test2" class="col s12" class="card-content">
+                                           <form #employeeForm="ngForm" (ngSubmit)="register(employeeForm)">
+               
+                                                   <div class="input-field">
+                                                               <input type="text" id="keep_name_inline" name="name" #name="ngModel"
+                                                                   [(ngModel)]="userService1.user.name">
+                                                               <label for="keep_name_inline"> Nombre</label>
+                                                           </div>
+
+                                                           <div class="input-field">
+                                                                       <input type="tel" id="keep_phone_inline" name="name" #name="ngModel"
+                                                                           [(ngModel)]="userService1.user.name">
+                                                                           <label for="keep_phone_inline">Teléfono</label>
+                                                                   </div>
+   
+                                                   <div class="input-field">
+                                                       <input type="text" id="keep_email_inline" name="email" #email="ngModel"
+                                                           [(ngModel)]="userService1.user.email">
+                                                       <label for="keep_email_inline">Correo</label>
+                                                       </div>
+                                                   <div class="input-field">
+                                                       <input type="password" id="keep_password_inline" name="password" #password="ngModel"
+                                                           [(ngModel)]="userService1.user.password">
+                                                           <label for="keep_password_inline">Contraseña</label>
+                                                   </div>
+
+                                               <div class="form-field">
+                                                   <button class="btn-large waves-effect waves-light"
+                                                       style="width:100%; background-color: rgb(25, 122, 136); margin-top: 10px;">Registrarme</button>
+                                               </div>
+                                           </form>
+                                       </div>
+                                   
+                               </div>
+                       </div>
+
+                      
+                   </div>
+           </div>
+       </div>
+   </div>
+</div>
