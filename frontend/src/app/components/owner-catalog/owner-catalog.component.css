@@ -1,0 +1,20 @@
+.Bg {
+    background-color: white;
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+  }
+
+.notification-badge {
+  position:relative;
+  background-color: #e65100;
+  padding:3px 4px;
+  bottom: 15px;
+  left: 15px;
+  border-radius: 50%;
+}
+.notif{
+  position: absolute;
+}
+
+  
