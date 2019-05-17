@@ -1,0 +1,115 @@
+
+<html>
+
+    <div class="Bg">
+    
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">Perfil</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">Salir</a></li>
+    </ul>
+    
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-wrapper  cyan darken-3">
+        <a href="/" style="margin-left: 20px" class="brand-logo white-text">ADSI Project</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/"><i class="large material-icons">favorite_border</i></a></li>
+            <li><a href="/"><i class="large material-icons notif">mail_outline</i><small class="notification-badge">+3</small></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="large material-icons">perm_identity</i></a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Agregar nueva propiedad -->
+    <div class="section">
+    <div class="section">
+      <div class="row">
+          <div class="col l1"></div>
+        <div class="col l8">
+          <h5>&nbsp;&nbsp;&nbsp;Mis propiedades:&nbsp;&nbsp;&nbsp;&nbsp;3</h5>
+        </div>
+        <div class="col l2">
+            <button class="btn large waves-effect waves-light teal accent-4" type="submit" name="action">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Agregar nueva propiedad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class = "row">
+    <div class = "col l1"></div>
+    <!-- Contenido -->
+    <div class = "col l10">
+      <ul class="list-group">
+        <li *ngFor="let property of dataList">
+          <div class="col l4">
+            <div class = "card hoverable">
+              <div class="card-image">
+                  <img src={{property.image}}>
+                <span class="card-title">{{property.price}}</span>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <div class="col l7"><span class="card-title">{{property.title}}</span></div>
+                  <div class="col l5">
+                      <div class="switch">
+                          <label style="font-size: 20px"><span>Ocupada</span><input disabled type="checkbox"><span class="lever"></span></label>
+                        </div>
+                  </div>
+                </div>
+                  <p><i class="Large material-icons">star_border</i><i class="Large material-icons">star_border</i><i class="Large material-icons">star_border</i><i class="Large material-icons">star_border</i><i class="Large material-icons">star_border</i></p>
+                  <p>{{property.description}}</p>
+                  <div class="section">
+                      <span class="card-title">{{property.distance}}</span>
+                  </div>
+              </div>
+              <div class="card-action">
+                <div class="row"></div>
+                <div class="row">
+                <div class="col l6"></div>
+                <div class="col l6">
+                    <a href="#"><button class="btn right waves-effect waves-light orange accent-4" type="submit" name="action">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Editar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </li>
+      </ul>
+    </div>
+    <div class = "col l1"></div>
+    </div>
+    
+    
+    <footer class="page-footer cyan darken-3">
+        <div class="footer-copyright">
+          <div class="container">© 20149 Equipo-2 ADI ITAM, All rights reserved.</div>
+        </div>
+      </footer>
+    
+    </div>
+    
+    
+    <script>
+    
+    (function($) {
+        $(function() {
+    
+      $('.dropdown-button').dropdown({
+          inDuration: 300,
+          outDuration: 225,
+          constrainWidth: false, 
+          hover: true,
+          gutter: 0, 
+          belowOrigin: true, 
+          stopPropagation: false 
+        }
+      );
+    
+        });
+    })(jQuery); 
+    
+    </script>
+    
+    
+    </html>
