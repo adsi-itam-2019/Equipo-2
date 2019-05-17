@@ -13,11 +13,13 @@ import { AccommodationListComponent } from './components/accommodation-list/acco
 
 import {MatCardModule} from '@angular/material/card';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MailboxComponent } from './components/mailbox/mailbox.component';
 // Specify the routing of the App
 const routes: Route[] = [
   { path: '', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
-  { path: 'catalog', component: CatalogComponent}
+  { path: 'catalog', component: CatalogComponent},
+  {path: 'mailbox',component:MailboxComponent}
 ];
 
 
@@ -27,7 +29,8 @@ const routes: Route[] = [
     CatalogComponent,
     RegisterComponent,
     LoginComponent,
-    AccommodationListComponent
+    AccommodationListComponent,
+    MailboxComponent
   ],
   imports: [
     BrowserModule,
