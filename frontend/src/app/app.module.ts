@@ -23,7 +23,7 @@ const routes: Route[] = [
   { path: '', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'catalog', component: CatalogComponent},
-  { path: 'house', component: HousesComponent}
+  { path: 'house', component: HousesComponent},
   { path: 'ownercatalog', component: OwnerCatalogComponent},
   {path: 'mailbox',component:MailboxComponent}
 ];
@@ -36,8 +36,8 @@ const routes: Route[] = [
     RegisterComponent,
     LoginComponent,
     AccommodationListComponent,
-    HousesComponent
-    OwnerCatalogComponent
+    HousesComponent,
+    OwnerCatalogComponent,
     MailboxComponent
   ],
   imports: [
