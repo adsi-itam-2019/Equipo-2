@@ -19,6 +19,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { OwnerCatalogComponent } from './components/owner-catalog/owner-catalog.component';
 import { MailboxComponent } from './components/mailbox/mailbox.component';
 import { PropertyDetailsComponent } from './components/property-details/property-details.component';
+import { EditComponent } from './components/edit/edit.component';
 // Specify the routing of the App
 const routes: Route[] = [
   { path: '', component: LoginComponent},
@@ -27,7 +28,8 @@ const routes: Route[] = [
   { path: 'house', component: HousesComponent},
   { path: 'ownercatalog', component: OwnerCatalogComponent},
   {path: 'mailbox',component:MailboxComponent},
-  {path: 'propertyDetail',component:PropertyDetailsComponent}
+  {path: 'propertyDetail',component:PropertyDetailsComponent},
+  {path: 'edit',component:EditComponent}
 ];
 
 
@@ -41,7 +43,8 @@ const routes: Route[] = [
     HousesComponent,
     OwnerCatalogComponent,
     MailboxComponent,
-    PropertyDetailsComponent
+    PropertyDetailsComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
