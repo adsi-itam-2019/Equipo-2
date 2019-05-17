@@ -18,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { OwnerCatalogComponent } from './components/owner-catalog/owner-catalog.component';
 import { MailboxComponent } from './components/mailbox/mailbox.component';
+import { PropertyDetailsComponent } from './components/property-details/property-details.component';
 // Specify the routing of the App
 const routes: Route[] = [
   { path: '', component: LoginComponent},
@@ -25,7 +26,8 @@ const routes: Route[] = [
   { path: 'catalog', component: CatalogComponent},
   { path: 'house', component: HousesComponent},
   { path: 'ownercatalog', component: OwnerCatalogComponent},
-  {path: 'mailbox',component:MailboxComponent}
+  {path: 'mailbox',component:MailboxComponent},
+  {path: 'propertyDetail',component:PropertyDetailsComponent}
 ];
 
 
@@ -38,7 +40,8 @@ const routes: Route[] = [
     AccommodationListComponent,
     HousesComponent,
     OwnerCatalogComponent,
-    MailboxComponent
+    MailboxComponent,
+    PropertyDetailsComponent
   ],
   imports: [
     BrowserModule,
