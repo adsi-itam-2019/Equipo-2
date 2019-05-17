@@ -1,18 +1,51 @@
 <link rel="stylesheet" href="/mailbox.component">  
 <div class="Bg">
-  <nav class="nav-wrapper white darken-1">
-    <a href="/" style="margin-left: 20px" class="brand-logo grey-text text-darken-4">ADSI Project</a>
-    <ul class="right">
-        <li><a class="white-text grey darken-4" routerLink="/register">Salir</a></li>
+
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">Perfil</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">Salir</a></li>
     </ul>
-  </nav>
-<div class="container">
+    
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-wrapper  cyan darken-3">
+        <a href="/" style="margin-left: 20px" class="brand-logo white-text">ADSI Project</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/"><i class="large material-icons">favorite_border</i></a></li>
+            <li><a href="/"><i class="large material-icons">mail_outline</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="large material-icons">perm_identity</i></a></li>
+        </ul>
+      </div>
+    </nav>
 
 
   <ul class="collection">
-    <li class="collection-item">Alvin</li>
-    <li class="collection-item">Alvin</li>
-    <li class="collection-item">Alvin</li>
-    <li class="collection-item">Alvin</li>
+    
+    <li class="collection-item" style="background-color:#197a88">
+        <div class="col s3" ><h5 style="color:white"><b>3 mensajes sin leer</b></h5></div>
+    </li>
+    <li *ngFor="let mail of dataListUnread" >
+      <div class="row">   
+          
+        <b>
+        <div class="col s1"><label><input type="checkbox" /><span></span></label></div>
+        <div class="col s3" style="font-size:20px">{{mail.name}}</div>
+        <div class="col s6" style="font-size:20px">{{mail.body}}</div>
+        <div class="col s2" style="font-size:20px; position:relative; right:0%">{{mail.date}}</div>
+        </b>
+        <hr>
+      </div>
+    </li>
+    <li *ngFor="let mail of dataListRead" >
+        <div class="row">                        
+          <div class="col s1"><label><input type="checkbox"/><span></span></label></div>
+          <div class="col s3" style="font-size:20px">{{mail.name}}</div>
+          <div class="col s6" style="font-size:20px">{{mail.body}}</div>
+          <div class="col s2" style="font-size:20px; position:relative; right:0%">{{mail.date}}</div>       
+          <hr>
+        </div>
+      </li>
+
   </ul>
 </div>
