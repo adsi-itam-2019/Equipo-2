@@ -29,16 +29,13 @@
                   <form #houseForm="ngForm" (ngSubmit)="addHouse(houseForm)">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input type="text" name="titulo" placeholder="Un título descriptivo" 
-                            #titulo="ngModel" [(ngModel)]="houseService.selectedHouse.titulo">
+                            <input type="text" name="titulo" placeholder="Un título descriptivo" >
                         </div>
                         <div class="input-field col s12">
-                            <input type="text" name="precio" placeholder="Precio por mes"
-                            #position="ngModel" [(ngModel)]="houseService.selectedHouse.precio">
+                            <input type="text" name="precio" placeholder="Precio por mes">
                         </div>
                         <div class="input-field col s12">
-                            <input type="text" name="direccion" placeholder="Dirección del apartamento"
-                            #direccion="ngModel" [(ngModel)]="houseService.selectedHouse.direccion">
+                            <input type="text" name="direccion" placeholder="Dirección del apartamento">
                         </div>
                         
                         <div class="card-content">
@@ -81,8 +78,7 @@
                             </label>
                         </p>
                         <div class="input-field col s12">
-                            <input type="text" name="comentarios" placeholder="Comentarios o reglas a tomar a consideración"
-                            #position="ngModel" [(ngModel)]="houseService.selectedHouse.comentarios">
+                            <input type="text" name="comentarios" placeholder="Comentarios o reglas a tomar a consideración">
                         </div>
                         <label>Por favor suba todas las imagenes a la vez</label>
                         <form action="upload.php" method="post" multiple>
@@ -90,7 +86,7 @@
                           <input type='file' (change)="onSelectFile($event)" multiple>
                         </form>
                         <div class="card-action" style="color:#197a88" >
-                          <div class="btn right" (click)="sendForm(houseForm)">Enviar Datos</div>                      
+                          <button class="btn right" routerLink="/ownercatalog">Enviar Datos</button>                      
                         </div>
                     </div>
                   </form>

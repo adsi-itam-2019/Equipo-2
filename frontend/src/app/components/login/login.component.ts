@@ -26,9 +26,15 @@ export class LoginComponent implements OnInit {
   logUser(form: NgForm){
 
 
-    this.router.navigateByUrl('/catalog');
+    
 
-    //var pass = this.userService1.user.password;
+    var pass = this.userService1.user.email;
+    if(pass.slice(-7)=="itam.mx"){
+    this.router.navigateByUrl('/catalog');
+    }
+    else{
+    this.router.navigateByUrl('/ownercatalog');
+    }
 
     //M.toast({html: pass})
 
