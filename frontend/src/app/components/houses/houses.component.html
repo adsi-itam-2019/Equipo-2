@@ -10,6 +10,7 @@
   <nav>
     <div class="nav-wrapper  cyan darken-3">
       <a href="/" style="margin-left: 20px" class="brand-logo white-text">ADSI Project</a>
+      <a href="#" class="brand-logo center">Agregar nueva propiedad</a>
       <ul class="right hide-on-med-and-down">
           <li><a href="/"><i class="large material-icons">favorite_border</i></a></li>
           <li><a href="/"><i class="large material-icons">mail_outline</i></a></li>
@@ -23,9 +24,7 @@
       <div class="row">
         <div class="column">
           <div class="card">
-              <div class="card-action white-text center" style="background-color:rgb(222,133,82)">
-                  <h6> Agregar una casa </h6>
-              </div>
+              
               <div class="card-content">
                   <form #houseForm="ngForm" (ngSubmit)="addHouse(houseForm)">
                     <div class="row">
@@ -43,7 +42,7 @@
                         </div>
                         
                         <div class="card-content">
-                            <header >Servicios Incluidos</header>
+                            <header  style="color:#499da9"><b>Servicios Incluidos</b></header>
                         </div>
                         <p>
                             <label>
@@ -90,8 +89,8 @@
                           <img *ngFor='let url of urls'  [src]="url" height="200"> <br/>
                           <input type='file' (change)="onSelectFile($event)" multiple>
                         </form>
-                        <div class="card-action">
-                          <div class="btn right" (click)="sendForm(houseForm)">Enviar Datos</div>
+                        <div class="card-action" style="color:#197a88" >
+                          <div class="btn right" (click)="sendForm(houseForm)">Enviar Datos</div>                      
                         </div>
                     </div>
                   </form>
