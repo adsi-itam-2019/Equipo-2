@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const house=require('../CONTROLLERS/house.controller');
+const house=require('../controllers/house.controller');
 router.get('/',house.getHouses);
 router.post('/',house.createHouse);
 router.get('/:id',house.getHouse);
