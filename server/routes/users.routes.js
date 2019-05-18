@@ -1,4 +1,4 @@
-// File contains user related routes
+cd // File contains user related routes
 
 const express = require('express');
 const router =  express.Router();
