@@ -20,11 +20,33 @@ app.use( '/api/houses', require('./routes/houses.routes'));
 
 // Angular
 var path = require('path');
-/*
-app.get('*', function(req, res) {
+
+app.get('/', function(req, res) {
     console.log("dddd");
-    res.sendFile(path.resolve('frontend/dist/frontend/index.html')); // load the single view file (angular will handle the page changes on the front-end)
+    res.sendFile(path.resolve('frontend/dist/index.html')); // load the single view file (angular will handle the page changes on the front-end)
 });
+
+
+app.get('/styles.css', function(req, res) {
+    console.log("dddd");
+    res.sendFile(path.resolve('frontend/dist/styles.css')); // load the single view file (angular will handle the page changes on the front-end)
+});
+
+app.get('/runtime.js', function(req, res) {
+    console.log("dddd");
+    res.sendFile(path.resolve('frontend/dist/runtime.js')); // load the single view file (angular will handle the page changes on the front-end)
+});
+
+app.get('/polyfills.js', function(req, res) {
+    console.log("dddd");
+    res.sendFile(path.resolve('frontend/dist/polyfills.js')); // load the single view file (angular will handle the page changes on the front-end)
+});
+
+app.get('/main.js', function(req, res) {
+    console.log("dddd");
+    res.sendFile(path.resolve('frontend/dist/main.js')); // load the single view file (angular will handle the page changes on the front-end)
+});
+
 /*
 app.use(express.static(path.join(__dirname, 'frontend')));
 app.get('*', (req, res) => {

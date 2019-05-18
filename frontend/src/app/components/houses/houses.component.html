@@ -26,7 +26,7 @@
           <div class="card">
               
               <div class="card-content">
-                  <form #houseForm="ngForm" (ngSubmit)="addHouse(houseForm)">
+                  <form #houseForm="ngForm">
                     <div class="row">
                         <div class="input-field col s12">
                             <input type="text" name="titulo" placeholder="Un título descriptivo" >
@@ -82,8 +82,10 @@
                         </div>
                         <label>Por favor suba todas las imagenes a la vez</label>
                         <form action="upload.php" method="post" multiple>
-                          <img *ngFor='let url of urls'  [src]="url" height="200"> <br/>
-                          <input type='file' (change)="onSelectFile($event)" multiple>
+                            <!--img *ngFor='let url of urls'  [src]="url" height="200"> <br/-->
+                            <img height="200"> <br/>
+                          
+                          <input type='file' multiple>
                         </form>
                         <div class="card-action" style="color:#197a88" >
                           <button class="btn right" routerLink="/ownercatalog">Enviar Datos</button>                      

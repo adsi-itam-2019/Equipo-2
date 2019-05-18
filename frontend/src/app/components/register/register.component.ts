@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm }  from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 
 declare var M: any;
@@ -9,10 +10,11 @@ declare var M: any;
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
+  providers: [UserService]
 })
 export class RegisterComponent implements OnInit {
 
-  constructor( private router: Router) { }
+  constructor( public userService1: UserService, private router: Router) { }
 
   ngOnInit() {
     const elem = document.querySelector('.tabs');

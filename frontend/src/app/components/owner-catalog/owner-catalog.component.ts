@@ -18,7 +18,7 @@ export class OwnerCatalogComponent implements OnInit {
       "price":"$5,500",
       "distance":"+8 minutos caminando",
       "score": 4.5,
-      "image": ["assets\\img\\11.png"]
+      "image": ["assets/img/11.png"]
       
     },
     {
