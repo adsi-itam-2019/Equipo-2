@@ -1,3 +1,4 @@
+********El proyecto más completo se encuentra en la rama develop
 0) La página principal del sitio es la del login.
 0.1) Puede presionar el boton registrarme para ver el formato de registro, pero los campos llenados no se guardan en base.
 1) Al dar click en iniciar sesión, si se ingresa algun mail con terminacion @itam.mx entonces es redireccionada a la pagina donde
