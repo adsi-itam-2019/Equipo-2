@@ -20,7 +20,7 @@ app.use( '/api/houses', require('./routes/houses.routes'));
 
 // Angular
 var path = require('path');
-
+/*
 app.get('*', function(req, res) {
     console.log("dddd");
     res.sendFile(path.resolve('frontend/dist/frontend/index.html')); // load the single view file (angular will handle the page changes on the front-end)
